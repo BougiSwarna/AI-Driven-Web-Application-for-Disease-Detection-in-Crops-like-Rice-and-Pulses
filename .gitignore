@@ -1,0 +1,17 @@
+# Streamlit secrets (VERY IMPORTANT)
+.streamlit/secrets.toml
+
+# Service account keys
+*.json
+!static/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
