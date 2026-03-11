@@ -13,34 +13,33 @@ GreenScan AI is a professional plant disease diagnostics tool powered by deep le
 ## Project Structure
 
 ```text
-├── Plant_Disease_Detection_/
-│   ├── .streamlit/           # Streamlit configuration and secrets
-│   ├── models/               # Pre-trained Keras models (.keras)
-│   ├── static/               # Static assets and class labels
-│   ├── app.py                # Main Streamlit application
-│   ├── utils.py              # Firebase and helper functions
-│   ├── requirements.txt      # Project dependencies
-│   └── ...
-├── README.md                 # Project documentation
-└── ...
+├── .streamlit/           # Streamlit configuration and secrets
+├── models/               # Pre-trained Keras models (.keras)
+├── static/               # Static assets and class labels
+├── app.py                # Main Streamlit application
+├── firebase_config.py    # Firebase configuration setup
+├── firestore_db.py       # Firestore database interactions
+├── utils.py              # Helper functions
+├── requirements.txt      # Project dependencies
+└── README.md             # Project documentation
 ```
 
 ## Setup Instructions
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repository-url>
-cd ai-rice-pulse-disease-detection
+git clone https://github.com/BougiSwarna/AI-Driven-Web-Application-for-Disease-Detection-in-Crops-like-Rice-and-Pulses.git
+cd AI-Driven-Web-Application-for-Disease-Detection-in-Crops-like-Rice-and-Pulses
 ```
 
 ### 2. Install dependencies
 It is recommended to use a virtual environment.
 ```bash
-pip install -r Plant_Disease_Detection_/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Configure Firebase Secrets
-You need to provide your own Firebase credentials. Create a file at `Plant_Disease_Detection_/.streamlit/secrets.toml` and fill in your details:
+You need to provide your own Firebase credentials. Create a file at `.streamlit/secrets.toml` and fill in your details:
 
 ```toml
 [firebase_web]
@@ -57,7 +56,6 @@ project_id = "..."
 
 ### 4. Run the Application
 ```bash
-cd Plant_Disease_Detection_
 streamlit run app.py
 ```
 
